@@ -6,7 +6,6 @@ class TodosController < ActionController::API
 
   def create
     todo = Todo.create(todo_params)
-    todo.url = todo_url todo
     todo.save
     render :json => todo
   end
